@@ -1,0 +1,46 @@
+{
+    "name": "MCP Security Summit Workshop",
+    "image": "mcr.microsoft.com/devcontainers/python:3.12-bookworm",
+    "features": {
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+        "ghcr.io/azure/azure-dev/azd:latest": {},
+        "ghcr.io/devcontainers/features/azure-cli:1": {},
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "22"
+        },
+        "ghcr.io/jlaundry/devcontainer-features/azure-functions-core-tools:1": {
+            "version": "4"
+        },
+        "ghcr.io/devcontainers/features/git:1": {}
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-vscode.vscode-node-azure-pack",
+                "ms-azuretools.vscode-bicep",
+                "ms-azuretools.azure-dev",
+                "ms-azuretools.vscode-docker"
+            ]
+        }
+    },
+    "postCreateCommand": "bash .devcontainer/post-create.sh",
+    "forwardPorts": [
+        8000,
+        7071
+    ],
+    "portsAttributes": {
+        "8000": {
+            "label": "MCP Server",
+            "onAutoForward": "notify"
+        },
+        "7071": {
+            "label": "Azure Functions",
+            "onAutoForward": "notify"
+        }
+    },
+    "remoteUser": "vscode",
+    "hostRequirements": {
+        "memory": "8gb"
+    }
+}
