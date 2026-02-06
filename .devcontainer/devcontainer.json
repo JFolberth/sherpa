@@ -11,7 +11,8 @@
         "ghcr.io/jlaundry/devcontainer-features/azure-functions-core-tools:1": {
             "version": "4"
         },
-        "ghcr.io/devcontainers/features/git:1": {}
+        "ghcr.io/devcontainers/features/git:1": {},
+        "ghcr.io/devcontainers/features/github-cli:1": {}
     },
     "customizations": {
         "vscode": {
@@ -30,14 +31,23 @@
     },
     "forwardPorts": [
         8000,
+        8001,
         7071,
         6274,
         6277
     ],
     "portsAttributes": {
         "8000": {
-            "label": "MCP Server",
-            "onAutoForward": "notify"
+            "label": "MCP Vulnerable Server",
+            "onAutoForward": "notify",
+            "requireLocalPort": false,
+            "visibility": "public"
+        },
+        "8001": {
+            "label": "MCP Secure Server",
+            "onAutoForward": "notify",
+            "requireLocalPort": false,
+            "visibility": "public"
         },
         "7071": {
             "label": "Azure Functions",

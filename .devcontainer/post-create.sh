@@ -38,6 +38,17 @@ if [ -n "$CODESPACE_NAME" ]; then
     echo "   💡 To launch the inspector, run:"
     echo "      npx @modelcontextprotocol/inspector"
     echo "   Then open the URL above in your browser."
+
+    # Set port visibility to public (devcontainer.json visibility can be unreliable)
+    echo ""
+    echo "🔓 Setting port visibility to public..."
+    if command -v gh &> /dev/null; then
+        gh codespace ports visibility 6274:public 6277:public 8000:public 8001:public -c "$CODESPACE_NAME" 2>/dev/null && \
+            echo "   ✅ Ports 6274, 6277, 8000, 8001 set to public" || \
+            echo "   ⚠️  Could not set port visibility via gh CLI. Please set ports to Public manually in the Ports tab."
+    else
+        echo "   ⚠️  gh CLI not available. Please set ports 6274, 6277, 8000, 8001 to Public manually in the Ports tab."
+    fi
 fi
 
 # Verify installations
