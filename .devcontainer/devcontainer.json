@@ -25,6 +25,9 @@
         }
     },
     "postCreateCommand": "bash .devcontainer/post-create.sh",
+    "containerEnv": {
+        "HOST": "0.0.0.0"
+    },
     "forwardPorts": [
         8000,
         7071,
@@ -42,11 +45,15 @@
         },
         "6274": {
             "label": "MCP Inspector",
-            "onAutoForward": "notify"
+            "onAutoForward": "notify",
+            "requireLocalPort": false,
+            "visibility": "public"
         },
         "6277": {
             "label": "MCP Inspector Proxy",
-            "onAutoForward": "notify"
+            "onAutoForward": "notify",
+            "requireLocalPort": false,
+            "visibility": "public"
         }
     },
     "remoteUser": "vscode",

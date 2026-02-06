@@ -17,6 +17,29 @@ fi
 echo "🔍 Installing MCP Inspector..."
 npm install -g @modelcontextprotocol/inspector
 
+# Configure MCP Inspector for Codespaces port forwarding
+# In Codespaces, each forwarded port gets a unique hostname (e.g., {name}-{port}.app.github.dev)
+# The Inspector proxy needs special config because the UI and proxy are on different hostnames
+if [ -n "$CODESPACE_NAME" ]; then
+    echo "☁️  Codespaces detected - configuring MCP Inspector for port forwarding..."
+    PROXY_URL="https://${CODESPACE_NAME}-6277.${GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}"
+    CLIENT_ORIGIN="https://${CODESPACE_NAME}-6274.${GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}"
+    INSPECTOR_URL="${CLIENT_ORIGIN}/?MCP_PROXY_FULL_ADDRESS=${PROXY_URL}"
+    {
+        echo ""
+        echo "# MCP Inspector Codespaces configuration"
+        echo "export MCP_PROXY_FULL_ADDRESS=\"${PROXY_URL}\""
+        echo "export ALLOWED_ORIGINS=\"http://localhost:6274,${CLIENT_ORIGIN}\""
+        echo "export DANGEROUSLY_OMIT_AUTH=true"
+        echo "export MCP_AUTO_OPEN_ENABLED=false"
+    } >> "$HOME/.bashrc"
+    echo "   Inspector URL: ${INSPECTOR_URL}"
+    echo ""
+    echo "   💡 To launch the inspector, run:"
+    echo "      npx @modelcontextprotocol/inspector"
+    echo "   Then open the URL above in your browser."
+fi
+
 # Verify installations
 echo ""
 echo "✅ Verifying installations..."
