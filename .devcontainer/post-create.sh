@@ -15,7 +15,7 @@ fi
 
 # Install MCP Inspector globally
 echo "🔍 Installing MCP Inspector..."
-npm install -g @modelcontextprotocol/inspector@0.19.0
+npm install -g @modelcontextprotocol/inspector
 
 # Verify installations
 echo ""
