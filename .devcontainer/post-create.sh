@@ -13,6 +13,10 @@ if [ -f "$HOME/.bashrc" ]; then
     echo 'export PATH="$HOME/.local/bin:$PATH"' >> "$HOME/.bashrc"
 fi
 
+# Install MCP Inspector globally
+echo "🔍 Installing MCP Inspector..."
+npm install -g @modelcontextprotocol/inspector@0.19.0
+
 # Verify installations
 echo ""
 echo "✅ Verifying installations..."
