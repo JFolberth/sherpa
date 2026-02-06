@@ -3,6 +3,10 @@ set -e
 
 echo "🏔️ Setting up MCP Security Summit Workshop environment..."
 
+# Install system dependencies
+echo "📦 Installing system dependencies..."
+sudo apt-get update -qq && sudo apt-get install -y -qq uuid-runtime
+
 # Install uv for fast Python package management
 echo "📦 Installing uv..."
 curl -LsSf https://astral.sh/uv/install.sh | sh

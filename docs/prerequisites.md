@@ -435,6 +435,10 @@ Run these commands to verify your setup:
 ### Linux
 - Ubuntu 20.04+ and similar distributions are tested
 - Ensure `curl`, `wget`, and `sudo` are available
+- Install `uuid-runtime` (provides `uuidgen`, used by camp scripts for Azure Entra ID registration):
+  ```bash
+  sudo apt-get install uuid-runtime
+  ```
 - SELinux may require configuration adjustments
 
 ---
