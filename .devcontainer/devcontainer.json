@@ -27,7 +27,9 @@
     "postCreateCommand": "bash .devcontainer/post-create.sh",
     "forwardPorts": [
         8000,
-        7071
+        7071,
+        6274,
+        6277
     ],
     "portsAttributes": {
         "8000": {
@@ -36,6 +38,14 @@
         },
         "7071": {
             "label": "Azure Functions",
+            "onAutoForward": "notify"
+        },
+        "6274": {
+            "label": "MCP Inspector",
+            "onAutoForward": "notify"
+        },
+        "6277": {
+            "label": "MCP Inspector Proxy",
             "onAutoForward": "notify"
         }
     },
