@@ -3,11 +3,18 @@ hide:
   - toc
 ---
 
-# Camp 2: Gateway Security
-
-*Scaling the Gateway Ridge*
-
-![Gateway](../../images/sherpa-gateway.png)
+<div class="camp-banner">
+  <div class="camp-banner-content">
+    <div class="camp-banner-text">
+      <div class="camp-banner-label">Camp 2</div>
+      <h1>Gateway Security</h1>
+      <p>Scale security across multiple MCP servers with Azure API Management — a single, hardened gateway for authentication, rate limiting, and content filtering.</p>
+    </div>
+    <div class="camp-banner-image">
+      <img src="../../images/sherpa-gateway-sm.png" alt="Camp 2: Gateway" />
+    </div>
+  </div>
+</div>
 
 !!! info "Camp Details"
     **Tech Stack:** Python, MCP, Azure API Management, Container Apps, Content Safety, API Center, Entra ID  

@@ -3,11 +3,18 @@ hide:
   - toc
 ---
 
-# Camp 4: Monitoring & Telemetry
-
-*Reaching Observation Peak*
-
-![Monitoring](../../images/sherpa-monitoring.png)
+<div class="camp-banner">
+  <div class="camp-banner-content">
+    <div class="camp-banner-text">
+      <div class="camp-banner-label">Camp 4</div>
+      <h1>Monitoring & Telemetry</h1>
+      <p>Prove your defenses work with Log Analytics, Application Insights, dashboards, and automated alerting — because security without observability is blind.</p>
+    </div>
+    <div class="camp-banner-image">
+      <img src="../../images/sherpa-monitoring-sm.png" alt="Camp 4: Monitoring" />
+    </div>
+  </div>
+</div>
 
 !!! info "Camp Details"
     **Tech Stack:** Log Analytics, Application Insights, Azure Monitor, Workbooks, API Management, Container Apps, Functions, MCP  

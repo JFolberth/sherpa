@@ -3,11 +3,18 @@ hide:
   - toc
 ---
 
-# Base Camp: Understanding the Mountain
-
-*Know Your Terrain Before You Climb*
-
-![Base Camp](../images/sherpa-base-camp.png)
+<div class="camp-banner">
+  <div class="camp-banner-content">
+    <div class="camp-banner-text">
+      <div class="camp-banner-label">Base Camp</div>
+      <h1>Understanding the Mountain</h1>
+      <p>Know your terrain before you climb. Explore MCP fundamentals, run a vulnerable server, and experience firsthand what happens when security is absent.</p>
+    </div>
+    <div class="camp-banner-image">
+      <img src="../../images/sherpa-base-camp-sm.png" alt="Base Camp" />
+    </div>
+  </div>
+</div>
 
 Welcome to **Base Camp**, the foundation of your MCP security journey. Before we ascend to the higher camps where we'll tackle production-grade security patterns, we need to establish a solid foundation. Just as mountaineers acclimatize at base camp before attempting the summit, you'll start here by understanding what MCP is, why it needs security, and experiencing firsthand what happens when security is absent.
 

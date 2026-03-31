@@ -3,11 +3,18 @@ hide:
   - toc
 ---
 
-# Camp 3: I/O Security
-
-*Navigating the Treacherous I/O Pass*
-
-![Security](../../images/sherpa-security.png)
+<div class="camp-banner">
+  <div class="camp-banner-content">
+    <div class="camp-banner-text">
+      <div class="camp-banner-label">Camp 3</div>
+      <h1>I/O Security</h1>
+      <p>Defend against injection attacks and data leakage with Azure Functions for advanced input validation and output sanitization.</p>
+    </div>
+    <div class="camp-banner-image">
+      <img src="../../images/sherpa-security-sm.png" alt="Camp 3: I/O Security" />
+    </div>
+  </div>
+</div>
 
 Welcome to **Camp 3**, where the terrain gets treacherous. You've secured your base camp with OAuth and set up Content Safety to catch the obvious dangers, but experienced climbers know that the most dangerous hazards are the ones you don't see coming. A crevasse hidden under fresh snow. A loose handhold that looks solid. A weather pattern that shifts without warning.
 

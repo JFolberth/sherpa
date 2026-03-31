@@ -3,11 +3,18 @@ hide:
   - toc
 ---
 
-# Camp 1: Identity & Access Management
-
-*Establishing Your Identity on the Mountain*
-
-![Identity](../images/sherpa-identity.png)
+<div class="camp-banner">
+  <div class="camp-banner-content">
+    <div class="camp-banner-text">
+      <div class="camp-banner-label">Camp 1</div>
+      <h1>Identity & Access Management</h1>
+      <p>Establish production-grade identity controls with Managed Identity, Key Vault, and OAuth 2.1 — passwordless, enterprise-ready security for your MCP server.</p>
+    </div>
+    <div class="camp-banner-image">
+      <img src="../../images/sherpa-identity-sm.png" alt="Camp 1: Identity" />
+    </div>
+  </div>
+</div>
 
 Welcome to **Camp 1**, where you'll establish production-grade identity controls for your MCP server. In Base Camp, you learned that unauthenticated servers are dangerous. Now we'll deploy to Azure and implement enterprise security using Managed Identity, Key Vault, and OAuth 2.1 with JWT validation.
 
